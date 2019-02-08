@@ -4,6 +4,7 @@ private double branchAngle = .5;
 public void setup() 
 {   
 	size(1280,480);    
+	//frameRate(10);
 	noLoop(); 
 } 
 public void draw() 
@@ -11,12 +12,17 @@ public void draw()
 	background(0);   
 	stroke(0,255,0);   
 	line(640,480,640,380);   
-	drawBranches(640,380,100,3*Math.PI/2);  //will add later 
+	drawBranches(640,380,100,3*Math.PI/2);
+
 } 
 public void keyPressed() {
 	if ( key == 'g' ) { 
 		draw();
 	}
+}
+public void mousePressed() {
+	redraw();
+
 }
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
